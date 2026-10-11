@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Bar UK River Ranch Camp &amp; Ride | Riverside Camping in La Center, Washington</title>
+<meta name="description" content="Five private riverside sites on 85 acres along the East Fork of the Lewis River, with kayaks, horseback rides and a rope swing. 98% of campers recommend. From $85/night.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🏕️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --deep:#10303a; --deep2:#173f4a; --river:#2f6f78; --willow:#9bbfa8;
+  --mist:#edf2ef; --mist2:#dde7e2; --paper:#f8faf8;
+  --gold:#e0b04a; --gold-dk:#c4952f; --bark:#4a3626;
+  --ink:#18242a; --muted:#566a70; --line:rgba(16,48,58,.14);
+  --radius:18px; --shadow:0 18px 40px -18px rgba(16,48,58,.4);
+  --ease:cubic-bezier(.22,.8,.26,1);
+  --display:"Outfit",system-ui,sans-serif; --body:"Plus Jakarta Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{font-family:var(--body);color:var(--ink);background:var(--mist);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold-dk);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--river)}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.04;letter-spacing:-.02em}
+h2{font-size:clamp(2.1rem,4.6vw,3.5rem);font-weight:700;color:var(--deep)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:56ch}
+.sec{padding:clamp(72px,10vw,120px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head h2{margin-top:10px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;text-decoration:none;font-weight:700;border-radius:999px;padding:14px 26px;transition:transform .3s var(--ease),background .3s,box-shadow .3s,color .3s}
+.btn-gold{background:var(--gold);color:var(--deep);box-shadow:0 10px 24px -10px rgba(196,149,47,.8)}
+.btn-gold:hover{background:#ecc064;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--deep);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--deep);background:#fff}
+.btn-dark{background:var(--deep);color:#fff}
+.btn-dark:hover{background:var(--river);transform:translateY(-2px)}
+.btn i{transition:transform .3s var(--ease)}
+.btn:hover i.fa-arrow-right{transform:translateX(4px)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s,box-shadow .35s}
+.nav.scrolled{background:rgba(248,250,248,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:1.2rem;color:var(--deep);text-decoration:none}
+.logo .mark{width:40px;height:40px;border-radius:12px;background:var(--deep);color:var(--gold);display:grid;place-items:center;transition:transform .5s var(--ease)}
+.logo:hover .mark{transform:rotate(-8deg)}
+.nav-links{display:flex;gap:6px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-weight:600;font-size:.95rem;padding:9px 14px;border-radius:999px;transition:background .25s}
+.nav-links a:hover{background:rgba(16,48,58,.07)}
+.nav-links .btn{padding:10px 20px;margin-left:8px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;color:var(--deep)}
+
+/* hero */
+.hero{padding:120px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.award{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:7px 14px 7px 8px;border-radius:999px;font-size:.86rem;font-weight:600;color:var(--deep)}
+.award i{width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--deep);display:grid;place-items:center;font-size:.75rem}
+.hero h1{font-size:clamp(3rem,7vw,5.6rem);font-weight:800;color:var(--deep);margin:22px 0 18px}
+.hero h1 em{font-style:normal;color:var(--river);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;background:var(--gold);opacity:.6;z-index:-1;border-radius:4px;transform:scaleX(0);transform-origin:left;animation:underline 1s .6s var(--ease) forwards}
+@keyframes underline{to{transform:scaleX(1)}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-weight:500;margin-bottom:26px}
+.hero-meta i{color:var(--river);margin-right:8px}
+.collage{position:relative;height:600px}
+.collage figure{position:absolute;overflow:hidden;border-radius:26px;box-shadow:var(--shadow);cursor:zoom-in;opacity:0;animation:rise 1s var(--ease) forwards;background:var(--mist2)}
+.collage figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.collage figure:hover img{transform:scale(1.06)}
+.c1{inset:0 22% 18% 0;animation-delay:.1s!important}
+.c2{width:46%;height:44%;right:0;top:8%;animation-delay:.3s!important;border:6px solid var(--mist)}
+.c3{width:52%;height:40%;right:6%;bottom:0;animation-delay:.5s!important;border:6px solid var(--mist)}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.badge-spin{position:absolute;left:-34px;bottom:10%;width:124px;height:124px;border-radius:50%;background:var(--deep);color:#fff;display:grid;place-items:center;z-index:3;box-shadow:var(--shadow)}
+.badge-spin svg{position:absolute;inset:0;animation:spin 24s linear infinite}
+.badge-spin text{font-family:var(--body);font-size:9.4px;font-weight:700;letter-spacing:.2em;fill:var(--gold);text-transform:uppercase}
+.badge-spin b{font-family:var(--display);font-size:1.7rem;line-height:1;display:block;text-align:center}
+.badge-spin small{display:block;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;opacity:.8;text-align:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* quick bar */
+.search-row{margin-top:48px;opacity:0;animation:rise .9s .6s var(--ease) forwards}
+.quick{background:#fff;border-radius:24px;padding:12px;display:grid;grid-template-columns:1.3fr 1.1fr 1.1fr .9fr auto;box-shadow:var(--shadow);border:1px solid var(--line)}
+.quick label{display:flex;align-items:center;gap:14px;padding:12px 20px;border-radius:16px;cursor:pointer;transition:background .25s;position:relative;min-width:0}
+.quick label+label::before{content:"";position:absolute;left:0;top:22%;bottom:22%;width:1px;background:var(--line)}
+.quick label:hover{background:var(--mist)}
+.quick label>i{width:42px;height:42px;border-radius:12px;background:var(--mist);color:var(--river);display:grid;place-items:center;flex:none;transition:background .25s,color .25s}
+.quick label:hover>i,.quick label:focus-within>i{background:var(--deep);color:var(--gold)}
+.fld{display:flex;flex-direction:column;min-width:0;flex:1}
+.quick small{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.quick select,.quick input{border:0;background:transparent;font-weight:600;padding:3px 0;outline:none;width:100%;cursor:pointer}
+.quick .btn{border-radius:18px;padding:0 34px;margin-left:8px}
+.search-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;margin-top:14px;padding:0 8px;font-size:.92rem;color:var(--muted)}
+.search-foot i{color:var(--river);margin-right:8px}
+.search-foot strong{color:var(--deep);font-size:1.05rem}
+
+/* ribbon */
+.ribbon{background:var(--deep);color:#fff;padding:26px 0}
+.ribbon ul{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.ribbon li{display:flex;align-items:center;gap:14px}
+.ribbon li>i{font-size:1.2rem;color:var(--gold);width:44px;height:44px;border-radius:14px;background:rgba(224,176,74,.12);display:grid;place-items:center;flex:none}
+.ribbon b{font-family:var(--display);font-size:1.3rem;display:block;line-height:1.1}
+.ribbon span{font-size:.85rem;opacity:.75}
+
+/* gallery */
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:transparent;padding:9px 18px;border-radius:999px;font-weight:600;cursor:pointer;transition:all .25s var(--ease);display:inline-flex;gap:8px;align-items:center}
+.chip:hover{border-color:var(--deep)}
+.chip[aria-pressed="true"]{background:var(--deep);color:#fff;border-color:var(--deep)}
+.chip .n{font-size:.75rem;opacity:.65}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;grid-auto-flow:dense;gap:14px}
+.tile{position:relative;overflow:hidden;border-radius:var(--radius);cursor:zoom-in;background:var(--mist2);border:0;padding:0}
+.tile.big{grid-column:span 2;grid-row:span 2}.tile.tall{grid-row:span 2}.tile.wide{grid-column:span 2}
+.tile.hide{display:none}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.tile:hover img{transform:scale(1.07)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,30,36,.75));opacity:0;transition:opacity .4s}
+.tile .cap{position:absolute;left:14px;right:14px;bottom:12px;z-index:2;color:#fff;font-weight:600;font-size:.88rem;text-align:left;opacity:0;transform:translateY(8px);transition:all .4s var(--ease)}
+.tile:hover::after,.tile:focus-visible::after{opacity:1}
+.tile:hover .cap,.tile:focus-visible .cap{opacity:1;transform:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,22,27,.95);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:min(1200px,92vw);max-height:80vh;border-radius:14px;object-fit:contain}
+.lb-bar{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:#fff;display:flex;gap:18px;align-items:center;font-weight:600;background:rgba(255,255,255,.1);padding:10px 18px;border-radius:999px;font-size:.92rem;max-width:92vw}
+.lb-btn{position:absolute;width:52px;height:52px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer;transition:background .25s,transform .25s}
+.lb-btn:hover{background:var(--gold);color:var(--deep);transform:scale(1.06)}
+.lb-prev{left:22px;top:50%;margin-top:-26px}.lb-next{right:22px;top:50%;margin-top:-26px}.lb-close{right:22px;top:22px}
+
+/* sites explorer */
+.sites-sec{background:var(--paper)}
+.explorer{display:grid;grid-template-columns:380px 1fr;gap:28px;align-items:start}
+.site-list{display:flex;flex-direction:column;gap:8px}
+.site-row{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;text-align:left;border:1.5px solid transparent;background:var(--mist);padding:10px;border-radius:16px;cursor:pointer;transition:all .3s var(--ease)}
+.site-row:hover{border-color:var(--line);transform:translateX(4px)}
+.site-row[aria-selected="true"]{background:#fff;border-color:var(--deep);box-shadow:var(--shadow)}
+.site-row img{width:64px;height:64px;border-radius:12px;object-fit:cover}
+.site-row h3{font-size:1.1rem;font-weight:700;color:var(--deep)}
+.site-row p{font-size:.82rem;color:var(--muted)}
+.site-row .rate{font-weight:700;font-size:.85rem;color:var(--river)}
+.detail{background:#fff;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);position:sticky;top:96px}
+.slides{position:relative;aspect-ratio:16/9;background:var(--mist2);overflow:hidden}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s,transform 1.2s var(--ease);transform:scale(1.04);cursor:zoom-in}
+.slides img.on{opacity:1;transform:none}
+.sl-nav{position:absolute;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--deep);cursor:pointer;transition:transform .25s;z-index:2}
+.sl-nav:hover{transform:scale(1.08)}
+.sl-prev{left:14px}.sl-next{right:14px}
+.dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.dots button{width:8px;height:8px;border-radius:99px;border:0;background:rgba(255,255,255,.6);cursor:pointer;transition:width .3s,background .3s;padding:0}
+.dots button.on{width:22px;background:#fff}
+.type-tag{position:absolute;top:14px;left:14px;z-index:2;background:var(--deep);color:#fff;font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:999px;display:flex;gap:7px;align-items:center}
+.detail-body{padding:28px 30px 30px;animation:fadeUp .5s var(--ease)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.detail-top{display:flex;justify-content:space-between;gap:16px;align-items:start;flex-wrap:wrap}
+.detail h3{font-size:2rem;font-weight:700;color:var(--deep)}
+.score{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--deep);background:var(--mist);padding:8px 14px;border-radius:999px;font-size:.92rem}
+.score i{color:var(--gold-dk)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.fact{background:var(--mist);border-radius:14px;padding:12px 14px}
+.fact small{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700}
+.fact b{font-family:var(--display);font-size:1.1rem;color:var(--deep)}
+.desc{color:var(--muted);margin-bottom:18px}
+.amen{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.amen span{display:inline-flex;align-items:center;gap:7px;font-size:.84rem;font-weight:600;padding:7px 12px;border-radius:10px;background:rgba(47,111,120,.1);color:var(--deep)}
+.amen span.no{background:rgba(86,106,112,.09);color:var(--muted)}
+.amen span.warn{background:rgba(224,176,74,.2);color:#6d4d0c}
+.detail-cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line);padding-top:20px}
+.from{margin-right:auto;color:var(--muted);font-size:.9rem}
+.from b{font-family:var(--display);font-size:1.6rem;color:var(--deep)}
+
+/* why / ride */
+.why{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:stretch}
+.why-photo{position:relative;border-radius:28px;overflow:hidden;min-height:520px;box-shadow:var(--shadow);background:var(--mist2)}
+.why-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform 1.4s var(--ease)}
+.why-photo:hover img{transform:scale(1.05)}
+.note-card{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(248,250,248,.94);backdrop-filter:blur(8px);padding:16px 18px;border-radius:18px;display:flex;gap:14px;align-items:center;font-size:.9rem;z-index:2}
+.note-card i{width:42px;height:42px;border-radius:12px;background:var(--gold);color:var(--deep);display:grid;place-items:center;flex:none}
+.why-copy{display:flex;flex-direction:column;justify-content:center}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0 22px}
+.perk{padding:20px;border-radius:18px;background:#fff;border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s}
+.perk:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.perk i{font-size:1.25rem;color:var(--river);margin-bottom:10px;display:block}
+.perk h4{font-size:1.12rem;color:var(--deep);margin-bottom:4px}
+.perk p{font-size:.9rem;color:var(--muted)}
+.dist{list-style:none;border-top:1px solid var(--line)}
+.dist li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600}
+.dist li span{display:flex;gap:12px;align-items:center}
+.dist li i{color:var(--river);width:18px;text-align:center}
+.dist em{font-style:normal;color:var(--muted);font-weight:500;font-size:.92rem;text-align:right}
+.loop{margin-top:56px;background:var(--deep);color:#fff;border-radius:30px;padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,56px);align-items:center;position:relative;overflow:hidden}
+.loop::before{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;border:40px solid rgba(224,176,74,.07);pointer-events:none}
+.loop-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(224,176,74,.15);color:var(--gold);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:999px}
+.loop h3{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:700;margin:16px 0 10px}
+.loop p{opacity:.82}
+.route{list-style:none;position:relative;display:flex;flex-direction:column;gap:6px}
+.route::before{content:"";position:absolute;left:29px;top:24px;bottom:24px;width:2px;background:repeating-linear-gradient(to bottom,rgba(224,176,74,.6) 0 6px,transparent 6px 12px)}
+.route li{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:14px;padding:9px 14px;border-radius:14px;transition:background .3s,transform .3s var(--ease)}
+.route li:hover{background:rgba(255,255,255,.08);transform:translateX(4px)}
+.route .dot{width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--deep);display:grid;place-items:center;font-size:.8rem;position:relative;z-index:1;box-shadow:0 0 0 4px var(--deep)}
+.route em{font-style:normal;font-size:.82rem;color:var(--willow);font-weight:600;text-align:right}
+
+/* host */
+.host{display:grid;grid-template-columns:.85fr 1.15fr;background:#fff;border-radius:30px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.host-card{background:var(--deep);color:#fff;padding:44px 36px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.host-card::before{content:"\f6c2";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:-30px;bottom:-40px;font-size:15rem;color:rgba(155,191,168,.08);line-height:1}
+.avatar{position:relative;width:170px;height:170px;margin-bottom:20px}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:5px solid var(--willow)}
+.avatar .vb{position:absolute;right:4px;bottom:6px;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--deep);display:grid;place-items:center;border:3px solid var(--deep)}
+.host-card h3{font-size:2rem;font-weight:700}
+.host-card .role{opacity:.75;margin:4px 0 26px}
+.host-stats{display:grid;grid-template-columns:repeat(3,1fr);width:100%;border-top:1px solid rgba(255,255,255,.15);padding-top:22px;gap:8px}
+.host-stats b{display:block;font-family:var(--display);font-size:1.5rem;color:var(--gold);line-height:1.1}
+.host-stats span{font-size:.78rem;opacity:.75}
+.host-body{padding:44px}
+.host-body h2{margin:10px 0 18px}
+.host-body>p{color:var(--muted);margin-bottom:22px}
+.host-facts{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:26px}
+.host-facts li{display:flex;gap:12px;align-items:center;padding:14px;border-radius:14px;background:var(--mist);font-weight:600;font-size:.92rem;transition:transform .3s var(--ease)}
+.host-facts li:hover{transform:translateY(-3px)}
+.host-facts i{width:36px;height:36px;border-radius:10px;background:#fff;color:var(--river);display:grid;place-items:center;flex:none}
+.host-say{border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin-bottom:28px}
+.host-say p{font-family:var(--display);font-size:1.2rem;font-weight:600;color:var(--deep)}
+.host-cta{display:flex;gap:10px;flex-wrap:wrap}
+
+/* reviews */
+.reviews{background:var(--deep);color:#fff;overflow:hidden}
+.reviews h2{color:#fff}.reviews .eyebrow{color:var(--gold)}
+.rv-score{display:flex;align-items:center;gap:18px}
+.rv-score b{font-family:var(--display);font-size:4rem;line-height:1;color:var(--gold)}
+.rv-score span{opacity:.8;font-size:.95rem}
+.rv-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 26px;scrollbar-width:none;margin-inline:calc(50% - 50vw);padding-inline:max(20px,calc(50vw - 600px))}
+.rv-track::-webkit-scrollbar{display:none}
+.rv{flex:0 0 min(340px,84vw);scroll-snap-align:start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:16px;transition:background .3s,transform .35s var(--ease)}
+.rv:hover{background:rgba(255,255,255,.11);transform:translateY(-4px)}
+.rv .q{font-family:var(--display);font-size:1.3rem;font-weight:600;line-height:1.25}
+.rv .stars{color:var(--gold);font-size:.8rem}
+.rv footer{margin-top:auto;display:flex;align-items:center;gap:12px;font-size:.88rem}
+.rv .av{width:40px;height:40px;border-radius:50%;background:var(--willow);color:var(--deep);font-weight:800;display:grid;place-items:center;font-family:var(--display)}
+.rv footer small{display:block;opacity:.65}
+.rv-ctrl{display:flex;gap:10px}
+.rv-ctrl button{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;transition:all .25s}
+.rv-ctrl button:hover{background:#fff;color:var(--deep)}
+
+/* booking */
+.book{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
+.book-side{position:sticky;top:96px;border-radius:26px;overflow:hidden;background:var(--deep);color:#fff}
+.book-side .ph{aspect-ratio:4/3;overflow:hidden;background:var(--deep2)}
+.book-side .ph img{width:100%;height:100%;object-fit:cover}
+.sum{padding:26px}
+.sum h3{font-size:1.6rem;margin-bottom:4px}
+.sum .sub{opacity:.75;font-size:.9rem;margin-bottom:18px}
+.sum dl{display:grid;grid-template-columns:1fr auto;gap:10px 16px;font-size:.95rem}
+.sum dt{opacity:.75}.sum dd{font-weight:700;text-align:right}
+.total{border-top:1px solid rgba(255,255,255,.18);margin-top:16px;padding-top:16px;display:flex;justify-content:space-between;align-items:end}
+.total b{font-family:var(--display);font-size:2rem;color:var(--gold)}
+.sum .fine{font-size:.78rem;opacity:.65;margin-top:10px}
+form.bk{background:#fff;border-radius:26px;padding:32px;border:1px solid var(--line)}
+.step-h{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:600;font-size:1.15rem;color:var(--deep);margin:6px 0 16px}
+.step-h span{width:30px;height:30px;border-radius:50%;background:var(--mist);display:grid;place-items:center;font-size:.9rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.row .field{margin-bottom:0}
+.field label{font-size:.85rem;font-weight:700;color:var(--deep)}
+.field input,.field select{border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--paper);transition:border-color .25s,box-shadow .25s;width:100%}
+.field input:focus,.field select:focus{outline:none;border-color:var(--river);box-shadow:0 0 0 4px rgba(47,111,120,.15)}
+.stepper{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);overflow:hidden}
+.stepper button{width:46px;height:46px;border:0;background:transparent;cursor:pointer;color:var(--deep);transition:background .2s}
+.stepper button:hover:not(:disabled){background:var(--mist)}
+.stepper button:disabled{opacity:.3;cursor:not-allowed}
+.stepper output{flex:1;text-align:center;font-weight:700}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{border:1.5px solid var(--line);border-radius:14px;padding:12px 6px;text-align:center;cursor:pointer;font-size:.84rem;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:6px;transition:all .25s var(--ease)}
+.seg label i{font-size:1.15rem;color:var(--river)}
+.seg label:hover{border-color:var(--deep)}
+.seg input:checked+label{background:var(--deep);color:#fff;border-color:var(--deep)}
+.seg input:checked+label i{color:var(--gold)}
+.seg input:focus-visible+label{outline:3px solid var(--gold-dk);outline-offset:2px}
+.alert{display:none;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;font-size:.88rem;margin-bottom:14px;background:rgba(224,176,74,.2);color:#6d4d0c}
+.alert.show{display:flex;animation:fadeUp .35s var(--ease)}
+.alert i{margin-top:3px}
+.submit{width:100%;padding:17px;font-size:1.02rem}
+.alt-send{text-align:center;font-size:.9rem;color:var(--muted);margin-top:14px}
+.linkbtn{background:none;border:0;padding:0;font-weight:700;color:var(--deep);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.linkbtn:hover{color:var(--river)}
+
+/* getting here */
+.here{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:#fff;border-radius:24px;padding:30px;border:1px solid var(--line)}
+.card h3{font-size:1.5rem;color:var(--deep);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.card h3 i{color:var(--river)}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.steps li:last-child{border:0}
+.steps li::before{content:counter(s);width:32px;height:32px;border-radius:50%;background:var(--mist);color:var(--deep);font-weight:800;display:grid;place-items:center;font-family:var(--display)}
+.know{list-style:none;display:flex;flex-direction:column;gap:12px}
+.know li{display:grid;grid-template-columns:24px 1fr;gap:12px;font-size:.95rem}
+.know i{color:var(--river);margin-top:5px}
+
+/* final + footer */
+.final{position:relative;border-radius:30px;overflow:hidden;min-height:380px;display:flex;align-items:center;margin-bottom:60px;background:var(--deep)}
+.final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 6s linear}
+.final:hover img{transform:scale(1.06)}
+.final::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,30,36,.9),rgba(10,30,36,.25));z-index:1}
+.final-in{position:relative;z-index:2;padding:clamp(28px,5vw,64px);color:#fff;max-width:640px}
+.final-in .eyebrow{color:var(--gold)}
+.final-in h2{color:#fff;margin:12px 0}
+.final-in p{opacity:.9;margin-bottom:24px}
+.ft{background:var(--deep);color:rgba(255,255,255,.78);padding:48px 0 28px}
+.ft-top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.14)}
+.ft .logo{color:#fff}.ft .logo .mark{background:var(--gold);color:var(--deep)}
+.ft ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+.ft a{text-decoration:none;transition:color .2s}.ft a:hover{color:var(--gold)}
+.ft-bot{padding-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.85rem;opacity:.7}
+
+.rv-in{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv-in.in{opacity:1;transform:none}
+
+@media(max-width:1000px){
+  .hero-grid,.why,.host,.book,.here,.loop{grid-template-columns:1fr}
+  .collage{height:460px}.badge-spin{left:8px}
+  .explorer{grid-template-columns:1fr}.detail{position:static}
+  .site-list{flex-direction:row;overflow-x:auto;padding-bottom:8px}.site-row{min-width:250px}
+  .book-side{position:static}
+  .quick{grid-template-columns:1fr 1fr}.quick .btn{grid-column:1/-1;margin:8px 0 0;padding:16px}.quick label+label::before{display:none}
+  .ribbon ul{grid-template-columns:1fr 1fr}
+  .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}
+  .burger{display:block}
+  .nav-links{position:absolute;top:80px;left:0;right:0;background:var(--paper);flex-direction:column;padding:16px 20px 22px;display:none;box-shadow:0 14px 24px rgba(16,48,58,.15);align-items:stretch}
+  .nav-links.open{display:flex}.nav-links .btn{margin:6px 0 0}
+}
+@media(max-width:600px){
+  .quick{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}.perks,.host-facts,.row{grid-template-columns:1fr}
+  .seg{grid-template-columns:1fr 1fr}.host-body{padding:30px 24px}form.bk{padding:22px}.tile.big,.tile.wide{grid-column:span 2}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv-in,.search-row,.collage figure{opacity:1;transform:none}html{scroll-behavior:auto}.hero h1 em::after{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo"><span class="mark"><i class="fa-solid fa-tents"></i></span>Bar UK River Ranch</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <ul class="nav-links" id="links">
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#sites">Campsites</a></li>
+      <li><a href="#ranch">The ranch</a></li>
+      <li><a href="#host">Hosts</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#book" class="btn btn-gold">Book your stay</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="award"><i class="fa-solid fa-star"></i>Star Hosts</span>
+      <h1>Camp the river, <em>ride the valley.</em></h1>
+      <div class="hero-meta">
+        <span><i class="fa-solid fa-location-dot"></i>La Center, Washington</span>
+        <span><i class="fa-solid fa-mountain-sun"></i>85 acres</span>
+        <span><i class="fa-solid fa-campground"></i>Tent &amp; RV sites</span>
+      </div>
+      <p class="lead">Five private campsites above the East Fork of the Lewis River. Paddle from your site, swim off the dock, or saddle up for a ride into town.</p>
+    </div>
+    <div class="collage">
+      <figure class="c1" data-lb="0"><img id="h1" alt="Camping beside the East Fork of the Lewis River" fetchpriority="high"></figure>
+      <figure class="c2" data-lb="1"><img id="h2" alt="Horseback ride through the valley toward La Center"></figure>
+      <figure class="c3" data-lb="3"><img id="h3" alt="Picnic table and fire pit at a riverside campsite"></figure>
+      <div class="badge-spin" aria-label="98% of campers recommend">
+        <svg viewBox="0 0 124 124" aria-hidden="true"><defs><path id="circ" d="M62,62 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs><text><textPath href="#circ">413 reviews, loved by campers,</textPath></text></svg>
+        <div><b>98%</b><small>recommend</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap search-row">
+    <form class="quick" id="quick" aria-label="Plan your stay">
+      <label><i class="fa-solid fa-campground"></i><span class="fld"><small>Campsite</small><select id="qSite"></select></span></label>
+      <label><i class="fa-solid fa-calendar-day"></i><span class="fld"><small>Check in</small><input type="date" id="qIn"></span></label>
+      <label><i class="fa-solid fa-calendar-check"></i><span class="fld"><small>Check out</small><input type="date" id="qOut"></span></label>
+      <label><i class="fa-solid fa-user-group"></i><span class="fld"><small>Guests</small><select id="qGuests"></select></span></label>
+      <button class="btn btn-gold" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Check availability</button>
+    </form>
+    <div class="search-foot">
+      <span>Sites from&nbsp;<strong>$85</strong>&nbsp;/ night</span>
+      <span><i class="fa-solid fa-paw"></i>Pets allowed</span>
+      <span><i class="fa-solid fa-sailboat"></i>Kayaks available</span>
+      <span><i class="fa-solid fa-fire"></i>Campfires allowed</span>
+    </div>
+  </div>
+</section>
+
+<section class="ribbon" aria-label="Quick facts">
+  <ul class="wrap">
+    <li><i class="fa-solid fa-star"></i><div><b>98%</b><span>of 413 reviews recommend</span></div></li>
+    <li><i class="fa-solid fa-tent"></i><div><b>5 sites</b><span>tent &amp; RV, sleeps 8 to 10</span></div></li>
+    <li><i class="fa-solid fa-horse"></i><div><b>3 mi</b><span>ride to La Center</span></div></li>
+    <li><i class="fa-solid fa-water"></i><div><b>32 mi</b><span>John Pollock water trail</span></div></li>
+    <li><i class="fa-solid fa-paw"></i><div><b>Pet-friendly</b><span>great for groups &amp; families</span></div></li>
+  </ul>
+</section>
+
+<section class="sec" id="photos">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div><span class="eyebrow"><i class="fa-solid fa-camera"></i>Photo gallery</span><h2>See every corner<br>before you arrive.</h2></div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="bento rv-in" id="bento"></div>
+  </div>
+</section>
+
+<section class="sec sites-sec" id="sites">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div><span class="eyebrow"><i class="fa-solid fa-campground"></i>Campsites</span><h2>Five sites, each<br>with its own view.</h2></div>
+      <p class="lead">Every site has a fire pit, potable water and a toilet close by. Pick one, or book several side by side for a group.</p>
+    </div>
+    <div class="explorer rv-in">
+      <div class="site-list" id="siteList" role="tablist" aria-label="Campsites"></div>
+      <article class="detail" id="detail" aria-live="polite"></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="ranch">
+  <div class="wrap">
+    <div class="why">
+      <div class="why-photo rv-in">
+        <img id="whyImg" alt="Diego, the lead rider, in his summer pasture" style="object-position:center 35%">
+        <div class="note-card"><i class="fa-solid fa-horse-head"></i><div><b>Meet Diego.</b> Your friendly lead rider on the valley trail ride.</div></div>
+      </div>
+      <div class="why-copy rv-in">
+        <span class="eyebrow"><i class="fa-solid fa-leaf"></i>Why campers come back</span>
+        <h2>Right in town's reach.<br>Feels far from it.</h2>
+        <div class="perks">
+          <div class="perk"><i class="fa-solid fa-horse"></i><h4>Horseback rides</h4><p>A gentle first ride for kids, or a valley ride for adults. Call your hosts to schedule.</p></div>
+          <div class="perk"><i class="fa-solid fa-sailboat"></i><h4>Kayaks on site</h4><p>Kayaks are available for guests to explore the quiet river.</p></div>
+          <div class="perk"><i class="fa-solid fa-person-swimming"></i><h4>Dock &amp; rope swing</h4><p>Swim off the dock, float the mellow river, or try the swing at Camp 1.</p></div>
+          <div class="perk"><i class="fa-solid fa-dove"></i><h4>Wildlife</h4><p>Guests spot herons, eagles, otters, owls, turtles and deer.</p></div>
+        </div>
+        <ul class="dist">
+          <li><span><i class="fa-solid fa-city"></i>La Center</span><em>3 mile ride, about 4 miles by paddle</em></li>
+          <li><span><i class="fa-solid fa-dice"></i>Ilani Casino</span><em>15 minutes away</em></li>
+          <li><span><i class="fa-solid fa-water"></i>John Pollock water trail</span><em>32 miles, camp is on it</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="loop rv-in">
+      <div>
+        <span class="loop-badge"><i class="fa-solid fa-route"></i>Signature ride</span>
+        <h3>Camp to town and back, on horseback.</h3>
+        <p>Tour the Lewis River valley, stop in La Center for breakfast, lunch or dinner, then ride home to your campsite.</p>
+      </div>
+      <ul class="route">
+        <li><span class="dot"><i class="fa-solid fa-tents"></i></span><b>Your campsite</b><em>Start</em></li>
+        <li><span class="dot"><i class="fa-solid fa-tree"></i></span><b>Lewis River valley</b><em>3 mile ride</em></li>
+        <li><span class="dot"><i class="fa-solid fa-utensils"></i></span><b>La Center</b><em>Meal break</em></li>
+        <li><span class="dot"><i class="fa-solid fa-flag-checkered"></i></span><b>Back at camp</b><em>Finish</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="host" style="padding-top:0">
+  <div class="wrap">
+    <div class="host rv-in">
+      <div class="host-card">
+        <div class="avatar"><img src="https://dxynby2r8cy0b.cloudfront.net/image/upload/c_fill,f_auto,h_300,w_300/v1674028853/profile/xc6sgeemi7tnytcomodi.jpg" alt="Michelle and Erik"><span class="vb"><i class="fa-solid fa-check"></i></span></div>
+        <h3>Michelle &amp; Erik</h3>
+        <p class="role">Star Hosts · Hosting since January 2019</p>
+        <div class="host-stats"><div><b>98%</b><span>recommend</span></div><div><b>413</b><span>reviews</span></div><div><b>85</b><span>acres</span></div></div>
+      </div>
+      <div class="host-body">
+        <span class="eyebrow"><i class="fa-solid fa-house-chimney"></i>Your hosts</span>
+        <h2>A family ranch since 1969.</h2>
+        <p>Erik's Swedish parents, Ulf and Petsy Kahn, bought the ranch in 1969 and raised horses and cattle, at one point 200 head. They rode the trails, fished, swam and camped here. Michelle and Erik now share a few private riverside sites, made to be everything crowded campgrounds are not.</p>
+        <ul class="host-facts">
+          <li><i class="fa-solid fa-star"></i>Star Host status</li>
+          <li><i class="fa-solid fa-comments"></i>Highly responsive</li>
+          <li><i class="fa-solid fa-child-reaching"></i>Great with first-time riders</li>
+          <li><i class="fa-solid fa-truck-monster"></i>RV boondockers welcome</li>
+        </ul>
+        <div class="host-say"><p>"We want it to be everything the crowded campgrounds are not."</p></div>
+        <div class="host-cta">
+          <a class="btn btn-dark" href="#book"><i class="fa-regular fa-calendar-check"></i>Request your stay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div><span class="eyebrow"><i class="fa-solid fa-heart"></i>Guest reviews</span><h2>413 reviews.<br>Many return every year.</h2></div>
+      <div style="display:flex;flex-direction:column;gap:18px;align-items:flex-end">
+        <div class="rv-score"><b>98%</b><span>of 559 ratings<br>recommend this ranch</span></div>
+        <div class="rv-ctrl"><button id="rvPrev" aria-label="Previous reviews"><i class="fa-solid fa-arrow-left"></i></button><button id="rvNext" aria-label="Next reviews"><i class="fa-solid fa-arrow-right"></i></button></div>
+      </div>
+    </div>
+  </div>
+  <div class="rv-track" id="rvTrack"></div>
+</section>
+
+<section class="sec" id="book">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div><span class="eyebrow"><i class="fa-regular fa-calendar-check"></i>Book your stay</span><h2>Plan your trip,<br>then lock it in.</h2></div>
+      <p class="lead">Choose a site and dates for an estimate, then send a booking request. The hosts reply to confirm availability and final pricing.</p>
+    </div>
+    <div class="book rv-in">
+      <aside class="book-side">
+        <div class="ph"><img id="sumImg" alt=""></div>
+        <div class="sum">
+          <h3 id="sumName">Camp 1</h3>
+          <p class="sub" id="sumSub">RV / tent site · Sleeps 10</p>
+          <dl>
+            <dt>Check in</dt><dd id="sumIn">Add date</dd>
+            <dt>Check out</dt><dd id="sumOut">Add date</dd>
+            <dt>Nights</dt><dd id="sumN">0</dd>
+            <dt>Guests</dt><dd id="sumG">2</dd>
+            <dt>Rate from</dt><dd>$85 / night</dd>
+          </dl>
+          <div class="total"><span>Estimated total</span><b id="sumTotal">$0</b></div>
+          <p class="fine">Estimate uses the starting rate. Taxes, fees and the final price are confirmed by the hosts.</p>
+        </div>
+      </aside>
+      <form class="bk" id="bk" novalidate>
+        <div class="step-h"><span>1</span>Your stay</div>
+        <div class="field"><label for="bName">Your name</label><input type="text" id="bName" placeholder="Full name" autocomplete="name"></div>
+        <div class="field"><label for="bSite">Campsite</label><select id="bSite"></select></div>
+        <div class="row">
+          <div class="field"><label for="bIn">Check in</label><input type="date" id="bIn"></div>
+          <div class="field"><label for="bOut">Check out</label><input type="date" id="bOut"></div>
+        </div>
+        <div class="row" style="margin-bottom:22px">
+          <div class="field"><label>Adults</label><div class="stepper"><button type="button" data-k="adults" data-d="-1" aria-label="Fewer adults"><i class="fa-solid fa-minus"></i></button><output id="oAd">2</output><button type="button" data-k="adults" data-d="1" aria-label="More adults"><i class="fa-solid fa-plus"></i></button></div></div>
+          <div class="field"><label>Children</label><div class="stepper"><button type="button" data-k="children" data-d="-1" aria-label="Fewer children"><i class="fa-solid fa-minus"></i></button><output id="oCh">0</output><button type="button" data-k="children" data-d="1" aria-label="More children"><i class="fa-solid fa-plus"></i></button></div></div>
+        </div>
+        <div class="step-h"><span>2</span>Plan to add</div>
+        <div class="seg" id="seg">
+          <div><input type="checkbox" id="x1" value="a horseback ride"><label for="x1"><i class="fa-solid fa-horse"></i>Horseback ride</label></div>
+          <div><input type="checkbox" id="x2" value="kayaking"><label for="x2"><i class="fa-solid fa-sailboat"></i>Kayaking</label></div>
+          <div><input type="checkbox" id="x3" value="a group stay across several sites"><label for="x3"><i class="fa-solid fa-people-group"></i>Group stay</label></div>
+          <div><input type="checkbox" id="x4" value="bringing pets"><label for="x4"><i class="fa-solid fa-paw"></i>Bringing pets</label></div>
+        </div>
+        <div class="alert" id="alert" role="alert"><i class="fa-solid fa-circle-info"></i><span id="alertTxt"></span></div>
+        <a class="btn btn-gold submit" id="go" href="#"><i class="fa-regular fa-paper-plane"></i>Send booking request</a>
+        <p class="alt-send">Prefer to send it yourself? <button type="button" class="linkbtn" id="copy">Copy my trip details</button></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="know" style="padding-top:0">
+  <div class="wrap here">
+    <div class="card rv-in">
+      <h3><i class="fa-solid fa-signs-post"></i>How booking works</h3>
+      <ol class="steps">
+        <li><span>Pick a campsite and your dates in the planner above.</span></li>
+        <li><span>Send your booking request. Your email app opens with the trip details filled in.</span></li>
+        <li><span>The hosts reply to confirm availability and price, and share the exact address once you book.</span></li>
+        <li><span>Call your hosts to schedule a horseback ride during your stay.</span></li>
+      </ol>
+    </div>
+    <div class="card rv-in">
+      <h3><i class="fa-solid fa-circle-exclamation"></i>Good to know</h3>
+      <ul class="know">
+        <li><i class="fa-solid fa-triangle-exclamation"></i><span>Sites sit on a bluff above the river, with a 1 to 10 ft drop depending on the season. Keep children and dogs away from the edge.</span></li>
+        <li><i class="fa-solid fa-plug-circle-xmark"></i><span>No electric or water hookups. Vehicles must be under 25 ft.</span></li>
+        <li><i class="fa-solid fa-life-ring"></i><span>Life jackets are provided. Bring your own if your child is under 30 lbs.</span></li>
+        <li><i class="fa-solid fa-explosion"></i><span>Fireworks can be loud around July 4th. Plan for pets and little ones.</span></li>
+        <li><i class="fa-solid fa-mound"></i><span>Some sites have uneven ground. Tents can be set higher up on the bank.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="final rv-in">
+    <img id="finalImg" alt="">
+    <div class="final-in">
+      <span class="eyebrow"><i class="fa-solid fa-moon"></i>Summer weekends fill up</span>
+      <h2>Your riverside spot in La Center is waiting.</h2>
+      <p>From $85 a night, with kayaks, horses and a rope swing a few steps away.</p>
+      <a href="#book" class="btn btn-gold">Book your site <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <a href="#top" class="logo"><span class="mark"><i class="fa-solid fa-tents"></i></span>Bar UK River Ranch Camp &amp; Ride</a>
+      <ul><li><a href="#photos">Photos</a></li><li><a href="#sites">Campsites</a></li><li><a href="#ranch">The ranch</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#book">Book</a></li></ul>
+    </div>
+    <div class="ft-bot"><span>&copy; 2026 Bar UK River Ranch Camp &amp; Ride · La Center, Washington</span><span>Booking requests go straight to the hosts</span></div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-btn lb-close" id="lbX" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lb-btn lb-prev" id="lbP" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lbImg" alt="">
+  <button class="lb-btn lb-next" id="lbN" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lb-bar"><span id="lbCap"></span><span id="lbCnt"></span></div>
+</div>
+
+<script>
+const CDN='https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_';
+const R='bar-uk-river-ranch-camp-ride';
+const P=(v,id,tag,folder='campground-photos')=>`${v}/${folder}/${id}/${R}-${tag}-pacific-northwest.jpg`;
+const U=(p,w)=>`${CDN}${w},q_auto/${p}`;
+/* >>> Set the email address that should receive booking requests <<< */
+const CONTACT_EMAIL='bookings@your-domain.com';
+
+const ph={
+  river:P('v1548210242','wtlfk0lqz1qfdlilzxh1',R), ride:P('v1548210133','t5viycgjlwrimkkxqicm',R),
+  diego:P('v1560021516','y7uqo111ws4oqog4g8j1',R), table:P('v1561001699','bmna6mvxop65jxgnhovo',R),
+  east:P('v1560021403','fdkaqzfl8uqwplc3nvfi',R), ranch:P('v1560073821','ufbulnihs1ukh4pujwqr',R),
+  c1a:P('v1568237446','li333ygpbngg2oebo0yn','camp-1'), c1b:P('v1566615182','ilnrvk7w9zwovzztzag8','camp-1'), c1c:P('v1591953992','bn9kxh3uvpzzhf20ntem','camp-1'),
+  c2a:P('v1618878738','bpjgaldfm0jaocatuyyn','camp-2'), c2b:P('v1601309886','jjafuthth8pka96filsd','camp-2'),
+  c3a:P('v1676541059','nixh5mtwutq1h6nv9lvd','camp-3','campsite-photos'), c3b:P('v1676482155','tjtp38reg2fldiu7a8ln','camp-3','campsite-photos'),
+  c4a:P('v1601342908','eizsy6kvwqkitqomzetc','camp-4'), c4b:P('v1601867334','xay1zbbwalem7ouzenkb','camp-4'),
+  c5a:P('v1690248335','uca7posn9mezks7faydf','camp-5'), c5b:P('v1654943919','b5ssp2uglas6ryv662zp','camp-5'), c5c:P('v1654664263','b0su91ohdwnmww9jsh8y','camp-5')
+};
+
+const sites=[
+ {id:'373236',n:'Camp 1',sleeps:10,rate:99,cnt:148,best:'Groups & rope swing',pics:[ph.c1a,ph.c1b,ph.c1c],
+  d:'On the east end of camp, spacious and private feeling, with a large flat grassy area for several tents or a spot below near the river. Home of the popular rope swing. Pairs well with Camp 2 for family and friend groups.'},
+ {id:'373237',n:'Camp 2',sleeps:8,rate:98,cnt:113,best:'Groups & couples',pics:[ph.c2a,ph.c2b],
+  d:'At least two areas up top for tents, or room for one RV, with a good balance of sun and shade. A fire pit, two Adirondack chairs, a bistro table and a picnic table are included. Close to the dock and well water, but not too close.'},
+ {id:'373238',n:'Camp 3',sleeps:8,rate:98,cnt:87,best:'2 to 4 people',pics:[ph.c3a,ph.c3b],
+  d:'Beside the dock and swimming area, yet very private. A bit more intimate, with one small tent spot below near the river and space above for a tent or trailer. Parking is more limited than at other sites.'},
+ {id:'389960',n:'Camp 4',sleeps:10,rate:97,cnt:126,best:'Families by the water',pics:[ph.c4a,ph.c4b,ph.c2b],
+  d:'Roomy and very private feeling, right on the river, with a knotted rope for kids and dogs to reach the water. Two small tents fit below by the fire area, with a larger tent or RV on the flat grass above.'},
+ {id:'373240',n:'Camp 5',sleeps:10,rate:99,cnt:82,best:'Large groups & dogs',pics:[ph.c5a,ph.c5b,ph.c5c],
+  d:'The most spacious site, on the west end, with big open space and plenty of privacy. A sandy slope leads to the river with a knotted rope to help kids down. Huge shade trees balance the sun.'}
+];
+const REV=[
+ ['Closest to glamping I ever want to get. Michelle and Erik were incredibly hospitable.','Kyla H.','Camp 4 · August 2026'],
+ ['Second year renting all 5 sites for 10 middle school families. The river is mellow and the rope swing is a hit.','Karen J.','Camp 1 · August 2026'],
+ ['One of my favorite campgrounds of all time. Highly recommend adding horseback riding.','Julie C.','Camp 5 · August 2026'],
+ ['Large group of adults, teens, kids and two dogs. We kayaked, fished, swam and had a water fight on the grass.','Hannah P.','Camp 2 · August 2026'],
+ ['Super close to town but secluded enough to feel far out. Porta potties were super clean.','Kayleigh F.','Camp 5 · September 2026'],
+ ['Six years straight. Kind hosts, a beautiful property and great amenities.','Maggie R.','Camp 2 · July 2026'],
+ ['A sanctuary for bird lovers. Turtles, deer, rabbits and birdsong at 5 am.','M W.','Camp 1 · July 2026'],
+ ['Spot 4 is shady with a lovely fire ring right on the river bank. Would stay again in a heartbeat.','Pamela R.','Camp 4 · August 2026']
+];
+const G=[ /* [photo, caption, category, size] */
+ [ph.river,'Camp beside the East Fork of the Lewis River','river','big'],
+ [ph.ride,'A 3 mile ride through the valley into town','ride',''],
+ [ph.diego,'Diego, your friendly lead rider','ride','tall'],
+ [ph.table,'Picnic table, fire pit and chairs at Camp 1','camp',''],
+ [ph.east,'View east to La Center','river','wide'],
+ [ph.c1a,'Camp 1','camp',''],
+ [ph.c2a,'Camp 2','camp','big'],
+ [ph.ranch,'The ranch and river','river',''],
+ [ph.c3a,'Camp 3','camp',''],
+ [ph.c4a,'Camp 4','camp','wide'],
+ [ph.c5a,'Camp 5','camp','tall'],
+ [ph.c5b,'Camp 5 under the shade trees','camp',''],
+ [ph.c4b,'Camp 4 by the fire ring','camp','']
+];
+const $=s=>document.querySelector(s);
+const fmt=d=>d?new Date(d+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'Add date';
+const st={site:sites[0].id,inn:'',out:'',adults:2,children:0};
+const cur=()=>sites.find(s=>s.id===st.site);
+
+/* images */
+$('#h1').src=U(ph.river,1400);$('#h2').src=U(ph.ride,900);$('#h3').src=U(ph.table,900);
+$('#whyImg').src=U(ph.diego,1000);$('#finalImg').src=U(ph.east,1600);
+
+/* gallery */
+const bento=$('#bento');
+bento.innerHTML=G.map((g,i)=>`<button class="tile ${g[3]}" data-i="${i}" data-c="${g[2]}" aria-label="Open photo: ${g[1]}"><img src="${U(g[0],g[3]?900:600)}" alt="${g[1]}" loading="lazy"><span class="cap">${g[1]}</span></button>`).join('');
+const cats=[['all','All','fa-images'],['river','River','fa-water'],['ride','Horses','fa-horse'],['camp','Campsites','fa-campground']];
+$('#chips').innerHTML=cats.map((c,i)=>`<button class="chip" data-f="${c[0]}" aria-pressed="${i==0}"><i class="fa-solid ${c[2]}"></i>${c[1]} <span class="n">${c[0]=='all'?G.length:G.filter(g=>g[2]==c[0]).length}</span></button>`).join('');
+$('#chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;
+  document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
+  bento.querySelectorAll('.tile').forEach(t=>t.classList.toggle('hide',b.dataset.f!=='all'&&t.dataset.c!==b.dataset.f))});
+
+/* lightbox */
+const lb=$('#lb');let list=[],li=0;
+function openLB(items,i){list=items;li=i;paint();lb.classList.add('open');$('#lbX').focus()}
+function paint(){const it=list[li];$('#lbImg').src=U(it[0],1600);$('#lbImg').alt=it[1];$('#lbCap').textContent=it[1];$('#lbCnt').textContent=`${li+1} / ${list.length}`}
+const step=d=>{li=(li+d+list.length)%list.length;paint()};
+bento.addEventListener('click',e=>{const t=e.target.closest('.tile');if(!t)return;
+  const vis=[...bento.querySelectorAll('.tile:not(.hide)')];openLB(vis.map(v=>G[+v.dataset.i]),vis.indexOf(t))});
+document.querySelectorAll('.collage figure').forEach(f=>f.addEventListener('click',()=>openLB(G,+f.dataset.lb)));
+$('#lbX').onclick=()=>lb.classList.remove('open');$('#lbP').onclick=()=>step(-1);$('#lbN').onclick=()=>step(1);
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});
+
+/* sites explorer */
+$('#siteList').innerHTML=sites.map(s=>`<button class="site-row" role="tab" data-id="${s.id}" aria-selected="false"><img src="${U(s.pics[0],200)}" alt="" loading="lazy"><div><h3>${s.n}</h3><p>Sleeps ${s.sleeps} · ${s.best}</p></div><span class="rate"><i class="fa-solid fa-thumbs-up"></i> ${s.rate}%</span></button>`).join('');
+let slide=0,exId=sites[0].id;
+function renderDetail(id){
+  exId=id;slide=0;const s=sites.find(x=>x.id===id);
+  document.querySelectorAll('.site-row').forEach(r=>r.setAttribute('aria-selected',r.dataset.id===id));
+  $('#detail').innerHTML=`
+  <div class="slides">
+    <span class="type-tag"><i class="fa-solid fa-tent"></i>RV / tent site</span>
+    ${s.pics.map((p,i)=>`<img src="${U(p,1200)}" alt="${s.n} photo ${i+1}" class="${i==0?'on':''}" data-p="${i}">`).join('')}
+    <button class="sl-nav sl-prev" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="sl-nav sl-next" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="dots">${s.pics.map((_,i)=>`<button class="${i==0?'on':''}" data-d="${i}" aria-label="Photo ${i+1}"></button>`).join('')}</div>
+  </div>
+  <div class="detail-body">
+    <div class="detail-top"><h3>${s.n}</h3><span class="score"><i class="fa-solid fa-thumbs-up"></i>${s.rate}% recommend · ${s.cnt} reviews</span></div>
+    <div class="facts"><div class="fact"><small>Sleeps</small><b>${s.sleeps} guests</b></div><div class="fact"><small>Vehicles</small><b>Under 25 ft</b></div><div class="fact"><small>Best for</small><b>${s.best}</b></div></div>
+    <p class="desc">${s.d}</p>
+    <div class="amen"><span><i class="fa-solid fa-fire"></i>Campfires allowed</span><span><i class="fa-solid fa-restroom"></i>Toilet</span><span><i class="fa-solid fa-droplet"></i>Potable water</span><span><i class="fa-solid fa-paw"></i>Pets allowed</span><span class="no"><i class="fa-solid fa-plug-circle-xmark"></i>No electric hookup</span><span class="no"><i class="fa-solid fa-faucet-drip"></i>No water hookup</span><span class="warn"><i class="fa-solid fa-triangle-exclamation"></i>Bluff above river</span></div>
+    <div class="detail-cta"><div class="from">From <b>$85</b> / night</div><button class="btn btn-gold" data-book="${s.id}">Book ${s.n} <i class="fa-solid fa-arrow-right"></i></button></div>
+  </div>`;
+}
+function goSlide(n){const imgs=[...document.querySelectorAll('.slides img')];slide=(n+imgs.length)%imgs.length;
+  imgs.forEach((im,i)=>im.classList.toggle('on',i===slide));document.querySelectorAll('.dots button').forEach((d,i)=>d.classList.toggle('on',i===slide))}
+$('#detail').addEventListener('click',e=>{
+  if(e.target.closest('.sl-prev'))return goSlide(slide-1);
+  if(e.target.closest('.sl-next'))return goSlide(slide+1);
+  const d=e.target.closest('.dots button');if(d)return goSlide(+d.dataset.d);
+  const im=e.target.closest('.slides img');if(im){const s=sites.find(x=>x.id===exId);return openLB(s.pics.map((p,i)=>[p,`${s.n} photo ${i+1}`]),+im.dataset.p)}
+  const b=e.target.closest('[data-book]');if(b){st.site=b.dataset.book;sync();$('#book').scrollIntoView()}});
+$('#siteList').addEventListener('click',e=>{const r=e.target.closest('.site-row');if(r)renderDetail(r.dataset.id)});
+renderDetail(exId);
+
+/* reviews */
+$('#rvTrack').innerHTML=REV.map(r=>`<article class="rv"><div class="stars">${'<i class="fa-solid fa-star"></i>'.repeat(5)}</div><p class="q">${r[0]}</p><footer><span class="av">${r[1][0]}</span><div><b>${r[1]}</b><small>${r[2]}</small></div></footer></article>`).join('');
+$('#rvPrev').onclick=()=>$('#rvTrack').scrollBy({left:-360,behavior:'smooth'});
+$('#rvNext').onclick=()=>$('#rvTrack').scrollBy({left:360,behavior:'smooth'});
+
+/* booking planner */
+const opts=sites.map(s=>`<option value="${s.id}">${s.n} (sleeps ${s.sleeps})</option>`).join('');
+$('#qSite').innerHTML=opts;$('#bSite').innerHTML=opts;
+$('#qGuests').innerHTML=Array.from({length:10},(_,i)=>`<option value="${i+1}"${i==1?' selected':''}>${i+1} guest${i?'s':''}</option>`).join('');
+const today=new Date().toISOString().split('T')[0];['#qIn','#qOut','#bIn','#bOut'].forEach(s=>$(s).min=today);
+function nights(){return st.inn&&st.out?Math.round((new Date(st.out)-new Date(st.inn))/864e5):0}
+function problem(){
+  const s=cur(),n=nights();
+  if(!st.inn||!st.out)return'Choose check-in and check-out dates.';
+  if(n<=0)return'Check-out must be after check-in.';
+  if(st.adults+st.children>s.sleeps)return`${s.n} sleeps up to ${s.sleeps}. Book a second site for a larger group.`;
+  return'';
+}
+function tripText(){
+  const s=cur(),n=nights(),extras=[...document.querySelectorAll('#seg input:checked')].map(i=>i.value),nm=$('#bName').value.trim();
+  return `Hello, I'd like to request a stay at Bar UK River Ranch.\n\nName: ${nm}\nCampsite: ${s.n}\nCheck in: ${fmt(st.inn)}\nCheck out: ${fmt(st.out)}${n>0?` (${n} nights)`:''}\nGuests: ${st.adults} adults, ${st.children} children${extras.length?`\nInterested in: ${extras.join(', ')}`:''}\n\nPlease let me know if these dates are available.`;
+}
+function mailHref(){return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Booking request: '+cur().n)}&body=${encodeURIComponent(tripText())}`}
+function sync(){
+  const s=cur(),n=nights(),g=st.adults+st.children;
+  $('#bSite').value=st.site;$('#qSite').value=st.site;$('#bIn').value=st.inn;$('#bOut').value=st.out;$('#qIn').value=st.inn;$('#qOut').value=st.out;
+  $('#qGuests').value=Math.min(Math.max(g,1),10);
+  $('#oAd').textContent=st.adults;$('#oCh').textContent=st.children;
+  document.querySelector('[data-k=adults][data-d="-1"]').disabled=st.adults<=1;
+  document.querySelector('[data-k=children][data-d="-1"]').disabled=st.children<=0;
+  $('#bOut').min=st.inn||today;
+  $('#sumImg').src=U(s.pics[0],900);$('#sumName').textContent=s.n;$('#sumSub').textContent=`RV / tent site · Sleeps ${s.sleeps}`;
+  $('#sumIn').textContent=fmt(st.inn);$('#sumOut').textContent=fmt(st.out);$('#sumN').textContent=n>0?n:0;$('#sumG').textContent=g;
+  $('#sumTotal').textContent=n>0?'$'+(n*85):'$0';
+  $('#go').href=mailHref();
+  const p=problem();$('#alert').classList.toggle('show',!!p&&(st.inn||st.out)&&!!p);$('#alertTxt').textContent=p;
+}
+$('#bSite').onchange=e=>{st.site=e.target.value;sync()};
+$('#bIn').onchange=e=>{st.inn=e.target.value;if(st.out&&st.out<=st.inn)st.out='';sync()};
+$('#bOut').onchange=e=>{st.out=e.target.value;sync()};
+$('#bk').addEventListener('click',e=>{const b=e.target.closest('.stepper button');if(!b)return;
+  st[b.dataset.k]=Math.max(b.dataset.k==='adults'?1:0,Math.min(10,st[b.dataset.k]+ +b.dataset.d));sync()});
+$('#go').addEventListener('click',e=>{const p=problem();if(p){e.preventDefault();$('#alertTxt').textContent=p;$('#alert').classList.add('show')}});
+$('#quick').addEventListener('submit',e=>{e.preventDefault();
+  st.site=$('#qSite').value;st.inn=$('#qIn').value;st.out=$('#qOut').value;
+  const g=+$('#qGuests').value;st.adults=g;st.children=0;if(st.out&&st.inn&&st.out<=st.inn)st.out='';
+  sync();$('#book').scrollIntoView()});
+$('#copy').onclick=async()=>{
+  const t=tripText();
+  try{await navigator.clipboard.writeText(t)}catch(_){const a=document.createElement('textarea');a.value=t;document.body.append(a);a.select();document.execCommand('copy');a.remove()}
+  $('#copy').textContent='Copied!';setTimeout(()=>$('#copy').textContent='Copy my trip details',2000)};
+$('#bName').addEventListener('input',sync);
+$('#bk').addEventListener('change',e=>{if(e.target.closest('#seg'))sync()});
+sync();
+
+/* nav + reveal */
+const nav=$('#nav'),links=$('#links'),burger=$('#burger');
+const onScroll=()=>nav.classList.toggle('scrolled',scrollY>20);addEventListener('scroll',onScroll,{passive:true});onScroll();
+burger.onclick=()=>{const o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
+links.addEventListener('click',e=>{if(e.target.closest('a'))links.classList.remove('open')});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv-in').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
